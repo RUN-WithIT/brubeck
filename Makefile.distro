@@ -19,8 +19,8 @@ $(ARCHIVE): clean-runtime brubeck
 	strip $(ARCHIVE)/brubeck
 
 # distro targets require an .ssh/config entry as below (but uncommented)
-# Host trouble
-# Hostname trouble.bottorrent.net
+# Host bubble
+# Hostname bubble.bottorrent.net
 # Port 22000
 # User dean
 INVIDIUSER=dbittner
@@ -35,10 +35,10 @@ invidi-distro: $(DISTROARCHIVE)
 	curl -u $(INVIDIUSER):$(INVIDIAKEY) -X PUT "http://jfrog.invidi.com/artifactory/rwi-files-local/latest/scratch_install_brubeck.sh" -T scratch_install.sh
 
 distro: $(DISTROARCHIVE)
-	scp $(DISTROARCHIVE) trouble:$(DISTROARCHIVE)
-	ssh -tt trouble "sudo mv $(DISTROARCHIVE) /opt/graphite/webapp/content/RWI/runtime/. ; sudo chown www-data:www-data /opt/graphite/webapp/content/RWI/runtime/$(DISTROARCHIVE)"
-	scp scratch_install_alpine.sh trouble:scratch_install_alpine_$(ARCHIVE).sh
-	ssh -tt trouble "sudo mv scratch_install_alpine_$(ARCHIVE).sh /opt/graphite/webapp/content/RWI/runtime/. ; sudo chown www-data:www-data /opt/graphite/webapp/content/RWI/runtime/scratch_install_alpine_$(ARCHIVE).sh"
+	scp $(DISTROARCHIVE) bubble:$(DISTROARCHIVE)
+	ssh -tt bubble "sudo mv $(DISTROARCHIVE) /opt/graphite/webapp/content/RWI/runtime/. ; sudo chown www-data:www-data /opt/graphite/webapp/content/RWI/runtime/$(DISTROARCHIVE)"
+	scp scratch_install_alpine.sh bubble:scratch_install_alpine_$(ARCHIVE).sh
+	ssh -tt bubble "sudo mv scratch_install_alpine_$(ARCHIVE).sh /opt/graphite/webapp/content/RWI/runtime/. ; sudo chown www-data:www-data /opt/graphite/webapp/content/RWI/runtime/scratch_install_alpine_$(ARCHIVE).sh"
 
 distro_local: $(DISTROARCHIVE)
 	cp $(DISTROARCHIVE) /tmp/.
