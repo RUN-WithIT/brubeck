@@ -10,8 +10,11 @@
 	    "type" : "carbon",
 	    "address" : "foul.local",
 	    "port" : 2004,
+	    "address" : "bubble.rwisynthetics.com",
+	    "port" : 2003,
+>>>>>>> 7be12c48fb24eeeb2c4e5fdff06c53b874f34ca5
 	    "frequency" : 10,
-	    "pickle" : true
+	    "pickle" : false
 	}
     ],
     "samplers" :

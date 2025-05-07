@@ -3,6 +3,10 @@
 Brubeck is a [statsd](https://github.com/etsy/statsd)-compatible stats
 aggregator written in C.
 
+## Quick Installation
+1. `sudo su`
+2. `./scratch_install.sh`
+
 ## What's different about this brubeck implementation.
 A number of things.
 - The http server has been removed so no libmicrohttpd and dependencies.

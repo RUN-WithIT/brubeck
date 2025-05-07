@@ -19,8 +19,8 @@ $(ARCHIVE): clean-runtime brubeck
 	strip $(ARCHIVE)/brubeck
 
 # distro targets require an .ssh/config entry as below (but uncommented)
-# Host trouble
-# Hostname trouble.bottorrent.net
+# Host bubble
+# Hostname bubble.bottorrent.net
 # Port 22000
 # User dean
 INVIDIUSER=dbittner

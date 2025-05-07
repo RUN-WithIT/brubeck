@@ -32,6 +32,14 @@
 	    "workers" : 8,
 	    "multisock" : true,
 	    "multimsg" : 0
+	},
+	{
+	    "type" : "rwid",
+	    "address" : "0.0.0.0",
+	    "port" : 9125,
+	    "workers" : 8,
+	    "multisock" : true,
+	    "multimsg" : 0
 	}
     ]
 }
